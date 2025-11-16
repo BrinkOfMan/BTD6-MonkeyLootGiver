@@ -1,16 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <RootNamespace>GainKnowledgeOnRound100</RootNamespace>
         <Configurations>Debug;Release</Configurations>
         <Nullable>enable</Nullable>
-        <AssemblyName>GainKnowledgeOnRound100</AssemblyName>
         <LangVersion>latest</LangVersion>
         <Optimize>False</Optimize>
         <DebugType>embedded</DebugType>
+        <PackageId>MonkeyLootGiver</PackageId>
     </PropertyGroup>
     <ItemGroup>
         <Content Include=".github\workflows\build.yml" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="LavaGang.MelonLoader" Version="0.7.1" />
     </ItemGroup>
 
     <Import Project="..\btd6.targets" />

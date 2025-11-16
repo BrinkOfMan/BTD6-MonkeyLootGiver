@@ -1,1 +1,1 @@
-Gain Knowledge Points when you beat round 100!
+Initial Release. Added base functionality for loot rewards.
