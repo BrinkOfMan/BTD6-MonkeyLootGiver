@@ -6,6 +6,6 @@
 Gain Monkey Money, Knowledge, and Trophies at Your Discretion!
 </h1>
 <br/>
-<h2 align="center">Gain various Monkey Loot whenever specific rounds are beaten! Configure the amount in the mod settings! Works in singleplayer and co-op.</h2>
+<h2 align="center">Gain various monkey loot whenever specific rounds are beaten! Configure the amount in the mod settings. Works in singleplayer and co-op.</h2>
 
 [![Requires BTD6 Mod Helper](https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/master/banner.png)](https://github.com/gurrenm3/BTD-Mod-Helper#readme)

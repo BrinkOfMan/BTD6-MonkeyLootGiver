@@ -39,7 +39,7 @@ public class MonkeyLootGiver : BloonsTD6Mod
     public ModSettingInt monkeyTrophiesToGain = new ModSettingInt(1)
     {
         min = 0,
-        max = 500,
+        max = 100,
         slider = true
     };
 
