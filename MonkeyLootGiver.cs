@@ -37,13 +37,6 @@ public class MonkeyLootGiver : BloonsTD6Mod
         max = 100,
         slider = true
     };
-    
-    public ModSettingInt monkeyTeamTrophiesToGain = new ModSettingInt(1)
-    {
-        min = 0,
-        max = 50000,
-        slider = true
-    };
 
     public ModSettingInt howManyRoundsBetweenRewards = new ModSettingInt(1)
     {
@@ -88,11 +81,8 @@ public class MonkeyLootGiver : BloonsTD6Mod
         
         int trophiesToGain = monkeyTrophiesToGain;
         GiveTrophies(trophiesToGain);
-        
-        int teamTrophiesToGain = monkeyTeamTrophiesToGain;
-        GiveTeamTrophies(trophiesToGain);
 
-        NotifyKnowledgePointsGained(knowledgeToGain, moneyToGain, trophiesToGain, teamTrophiesToGain, currentRound);
+        NotifyKnowledgePointsGained(knowledgeToGain, moneyToGain, trophiesToGain, currentRound);
     }
     
     private bool IsSandboxMode()
@@ -137,15 +127,9 @@ public class MonkeyLootGiver : BloonsTD6Mod
         trophyLoot.Apply(LootFrom.round100);
     }
     
-    private void GiveTeamTrophies(int amount)
+    private void NotifyKnowledgePointsGained(int knowledge, int money, int trophies, int currentRoundNumber)
     {
-        TeamTrophyLoot trophyLoot = new TeamTrophyLoot(amount);
-        trophyLoot.Apply(LootFrom.round100);
-    }
-    
-    private void NotifyKnowledgePointsGained(int knowledge, int money, int trophies, int teamTrophies, int currentRoundNumber)
-    {
-        string rewardText = $"Round {currentRoundNumber + 1} beaten. You gained {knowledge} knowledge, {money} money, {trophies} trophies, {teamTrophies} team trophies.";
+        string rewardText = $"Round {currentRoundNumber + 1} beaten. You gained {knowledge} knowledge, {money} money, {trophies} trophies.";
         ModHelper.Msg<MonkeyLootGiver>(rewardText);
     }
 }

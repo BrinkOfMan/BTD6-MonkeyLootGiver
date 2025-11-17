@@ -1,1 +1,1 @@
-More Code Cleanup. Option to give team trophies.
+Removed team trophies, as that feature is broken.
