@@ -1,1 +1,1 @@
-Code cleanup.
+More Code Cleanup. Option to give team trophies.
