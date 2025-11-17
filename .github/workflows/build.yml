@@ -8,7 +8,7 @@ on:
       - '*'
 
 env:
-  PROJECT_NAME: GainKnowledgeOnRound100
+  PROJECT_NAME: BTD6-MonkeyLootGiver
   
   MOD_HELPER_NAME: Btd6ModHelper
   BLOONSTD6: ./BloonsTD6
