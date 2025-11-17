@@ -1,1 +1,1 @@
-Initial Release. Added base functionality for loot rewards.
+Fixing README file and updating dll download to always target latest release.
