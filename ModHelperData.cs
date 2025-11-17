@@ -9,6 +9,6 @@ public static class ModHelperData
     public const string Description = "Gain various Monkey Loot! Configurable in mod settings. Works in single-player and co-op.";
 
     public const string RepoOwner = "BrinkOfMan";
-    public const string RepoName = "BTD6-MonkeyLootGiver"; // TODO add your repo name here, also in the download url in README.md
-    public const string Author = "FrozenChihuahua";
+    public const string RepoName = "BTD6-MonkeyLootGiver";
+    public const string Author = "BonoboNoBobo";
 }

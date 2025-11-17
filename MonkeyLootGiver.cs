@@ -135,7 +135,7 @@ public class MonkeyLootGiver : BloonsTD6Mod
     private void GiveTrophies(int amount)
     {
         TrophyLoot tophyLoot = new TrophyLoot(amount);
-        tophyLoot.Apply(LootFrom.odyssey);
+        tophyLoot.Apply(LootFrom.round100);
     }
 
     /// <summary>
