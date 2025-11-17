@@ -14,11 +14,6 @@ using System.Linq;
 
 namespace MonkeyLootGiver;
 
-/// <summary>
-/// [Overview of the mod]
-/// This mod gives the player monkey loot on specific rounds.
-/// The purpose of the mod is intended to make late game more worthwhile. Does not work in Sandbox.
-/// </summary>
 public class MonkeyLootGiver : BloonsTD6Mod
 {
 
@@ -70,27 +65,23 @@ public class MonkeyLootGiver : BloonsTD6Mod
 
     public void TryAddLoot()
     {
-        // doesn't work in sandbox mode!
         if (isSandboxMode)
             return;
 
         int currentRound = InGame.instance.GetSimulation().GetCurrentRound();
 
-        // don't run if it's not the correct round
         if (!CanEarnRewardThisRound(currentRound))
             return;
 
-        // apply knowledge points.
         int knowledgeToGain = knowledgePointsToGain;
         GiveKnowledgePoints(knowledgeToGain);
-        // apply money points.
+        
         int moneyToGain = monkeyMoneyToGain;
         GiveMonkeyMoney(moneyToGain);
-        // apply trophies.
+        
         int trophiesToGain = monkeyTrophiesToGain;
         GiveTrophies(trophiesToGain);
 
-        // show popup and debug message.
         NotifyKnowledgePointsGained(knowledgeToGain, moneyToGain, trophiesToGain, currentRound);
     }
     
@@ -116,7 +107,6 @@ public class MonkeyLootGiver : BloonsTD6Mod
         int roundsBetweenRewards = howManyRoundsBetweenRewards;
         bool isDesiredRound = IsDesiredRound(currentRound, roundsBetweenRewards);
 
-        // can only earn rewards if the player beat the desired round.
         return isDesiredRound;
     }
     
@@ -137,11 +127,7 @@ public class MonkeyLootGiver : BloonsTD6Mod
         TrophyLoot tophyLoot = new TrophyLoot(amount);
         tophyLoot.Apply(LootFrom.round100);
     }
-
-    /// <summary>
-    /// Notifies the player that they have gained knowledge points.
-    /// </summary>
-    /// <param name="amount">The number of knowledge points that the user gained.</param>
+    
     private void NotifyKnowledgePointsGained(int knowledge, int money, int trophies, int currentRoundNumber)
     {
         string rewardText = $"Round {currentRoundNumber + 1} beaten. You gained {knowledge} knowledge, {money} money, {trophies} trophies.";
